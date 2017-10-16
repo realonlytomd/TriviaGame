@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game Homework</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+
+	<div class="container-fluid">
+
+		<div class="row">
+
+			<div class="col-md-2">
+
+			</div>
+
+			<div class="col-md-8">
+
+				<div class="gameArea">
+			
+					<h1>Magical Harry Potter Trivia!</h1>
+
+					<br>
+					<br>
+					<br>
+
+					<button id="startButton">Start</button>
+
+					<div class="timeRemaining">
+
+						<h2>Time Remaining: <span id="countDown"></span> Seconds</h2>
+						
+					</div>
+
+					<div class="questions">
+
+						<h3>Harry Potter brought what kind of pet to Hogwarts?</h3>
+
+							<div id="qOneAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qOne" value="Dog">Dog
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qOne" value="Owl">Owl
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qOne" value="Cat">Cat
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qOne" value="Toad">Toad
+    								</label>
+
+  								</form>
+								
+							</div>
+
+						<h3>Hermione's Muggle father did what for a living?</h3>
+
+							<div id="qTwoAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qTwo" value="Politician">Politician
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qTwo" value="Veterinarian">Veterinarian
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qTwo" value="Witch Hunter">Witch Hunter
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qTwo" value="Dentist">Dentist
+    								</label>
+
+  								</form>
+								
+							</div>
+
+
+						<h3>Who raised Neville?</h3>
+
+							<div id="qThreeAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qThree" value="Grandmother">Grandmother
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qThree" value="Uncle">Uncle
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qThree" value="Parents">Parents
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qThree" value="Hagrid">Hagrid
+    								</label>
+
+  								</form>
+								
+							</div>
+
+
+						<h3>What living animal held one of Voldemort's horcruxes?</h3>
+
+							<div id="qFourAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qFour" value="Snake">Snake
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qFour" value="Ginny">Ginny
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qFour" value="Cat">Cat
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qFour" value="Owl">Owl
+    								</label>
+
+  								</form>
+								
+							</div>
+
+
+						<h3>Hagrid flew Harry as a baby to Privet Dr. using what?</h3>
+
+							<div id="qFiveAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qFive" value="His Broom">His Broom
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qFive" value="Car">Car
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qFive" value="Motorcycle">Motorcycle
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qFive" value="Airplane">Airplane
+    								</label>
+
+  								</form>
+								
+							</div>
+
+
+						<h3>You can turn on an Android phone's light with what spoken word?</h3>
+
+							<div id="qSixAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qSix" value="On">On!
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qSix" value="Lumos">Lumos!
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qSix" value="Flame On">Flame On!
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qSix" value="Ignite">Ignite!
+    								</label>
+
+  								</form>
+								
+							</div>
+
+
+						<h3>What spell would a wizard or witch say to summon an object?</h3>
+
+							<div id="qSevenAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qSeven" value="Come">Come!
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qSeven" value="Abacadabra">Abacadabra!
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qSeven" value="Accio">Accio!
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qSeven" value="Nox">Nox!
+    								</label>
+
+  								</form>
+								
+							</div>
+
+
+						<h3>What was the name of the Hippogriff that rescued Sirius Black?</h3>
+
+							<div id="qEightAnswers">
+
+								<form>
+
+    								<label class="radio-inline">
+      									<input type="radio" name="qEight">Talon
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qEight">Griffin
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qEight">Granger
+    								</label>
+    								<label class="radio-inline">
+      									<input type="radio" name="qEight">Buckbeak
+    								</label>
+
+  								</form>
+								
+							</div>
+						
+					</div>
+
+					<button id="doneButton">Done</button>
+
+					<div class="allDone">
+
+						<h2>All Done!</h2>
+
+						<h4>Correct Answers: <span id="correctAnswers"></span></h4>
+
+						<h4>Incorrect Answers: <span id="incorrectAnswers"></span></h4>
+
+						<h4>Unanswered: <span id="unAnswered"></span></h4>
+						
+					</div>
+
+				</div>
+			
+			</div>
+
+		</div>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>

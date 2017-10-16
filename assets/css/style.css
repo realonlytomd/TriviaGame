@@ -1,0 +1,49 @@
+body {
+	background-image: url("../images/parchment.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gameArea {
+	background-color: #00bcd4;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	padding: 40px;
+}
+
+h1 {
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 56px;
+}
+
+#startButton {
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 50px;
+	padding: 20px 40px 20px 40px;
+	margin-bottom: 40px;
+	width: 320px;
+    border: 2px solid black;
+    background-color: #a24680;
+
+}
+
+h3 {
+	margin-top: 40px;
+}
+
+#doneButton {
+	margin-top: 40px;
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 50px;
+	padding: 20px 40px 20px 40px;
+	width: 320px;
+	background-color: #00bcd4;
+    
+}
+
+#doneButton:hover {
+	border: 2px solid black;
+	background-color: #a24680;
+
+}
