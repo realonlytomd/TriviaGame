@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	//class="timeRemaining"
 	//class="questions"
-	//class="doneButton"
+	//id="doneButton"
 	//class="allDone"
 
 	$(".timeRemaining").hide();
@@ -26,9 +26,20 @@ $(document).ready(function() {
 		$(".questions").show();
 		$("#doneButton").show();
 
+		// also, when the questions come up, the countdown timer should start
+		// create function to make the time actually count
+		// so iterate down from 120 , every one second. 
+		// feed that number to my html (every second)
+
+		setTimeout(timeCountDown, 1000);
+
 	});
 
-	//jumping ahead:  when click the done button,
+	
+
+
+
+	//  when click the done button,
 	//make the done button disappear
 	//make time remaining div disappear
 	//make the questions div disappear
@@ -43,7 +54,7 @@ $(document).ready(function() {
 
 	});
 
-	// when the questions come up, the countdown timer should start
+	
 	
 
 
