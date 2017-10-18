@@ -103,18 +103,11 @@ $(document).ready(function() {
 
 		function choicesMade() {
 
-		
+		//	for (var i = 1; i <= 8; i++) {
 
-		//	quest[1] = $(#qOneAnswers.qOne.value);
-		//	quest[2] = $(#qTwoAnswers.qTwo.value);
-		//	quest[3] = $(#qThreeAnswers.qThree.value);
-		//	quest[4] = $(#qFourAnswers.qFour.value);
-		//	quest[5] = $(#qFiveAnswers.qFive.value);
-		//	quest[6] = $(#qSixAnswers.qSix.value);
-		//	quest[7] = $(#qSevenAnswers.qSeven.value);
-		//	quest[8] = $(#qEightAnswers.qEight.value);
+		//		quest[i] = $(#qOneAnswers.qOne.value);
 
-
+		//	}
 
 			// then check to see if the choices that were made are correct
 
