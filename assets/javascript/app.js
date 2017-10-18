@@ -22,10 +22,15 @@ $(document).ready(function() {
 	var wrongAnswers = 0;
 	var unAnswered = 0;
 
-	//this array is for getting the values of the user radio button selections
+	//this array is for getting the values (chosen answers) of the user radio button selections
 	var quest = [];
 
-	for (var i = 1; i <= 8; i++) {
+	//real answers: owl, Dentist, Grandmother, Snake, Motorcycle, Lumos, Accio, Buckbeak
+	var ans = ["Owl", "Dentist", "Grandmother", "Snake", "Motorcycle", "Lumos", "Accio", "Buckbeak"]
+
+
+
+	for (var i = 0; i < 8; i++) {
 
 		quest[i] = "";
 		console.log(quest[i]);
@@ -34,7 +39,6 @@ $(document).ready(function() {
 
 	// initialize the variable for getting values from radio buttons
 	var radioValue = "";
-	console.log(radioValue);
 
 	//creating the function to stop the timer if it counts down to zero
 	//or if the Done button is clicked
@@ -103,26 +107,24 @@ $(document).ready(function() {
 
 		function choicesMade() {
 
-		
-
-		//	quest[1] = $(#qOneAnswers.qOne.value);
-		//	quest[2] = $(#qTwoAnswers.qTwo.value);
-		//	quest[3] = $(#qThreeAnswers.qThree.value);
-		//	quest[4] = $(#qFourAnswers.qFour.value);
-		//	quest[5] = $(#qFiveAnswers.qFive.value);
-		//	quest[6] = $(#qSixAnswers.qSix.value);
-		//	quest[7] = $(#qSevenAnswers.qSeven.value);
-		//	quest[8] = $(#qEightAnswers.qEight.value);
+		//	quest[0] = $(#qOneAnswers.qOne.value);
+		//	quest[1] = $(#qTwoAnswers.qTwo.value);
+		//	quest[2] = $(#qThreeAnswers.qThree.value);
+		//	quest[3] = $(#qFourAnswers.qFour.value);
+		//	quest[4] = $(#qFiveAnswers.qFive.value);
+		//	quest[5] = $(#qSixAnswers.qSix.value);
+		//	quest[6] = $(#qSevenAnswers.qSeven.value);
+		//	quest[7] = $(#qEightAnswers.qEight.value);
 
 
 
 			// then check to see if the choices that were made are correct
 
-			for (var i = 1; i <= 8; i++) {
+			for (var i = 0; i < 8; i++) {
 
 				if (quest[i] === "") {
 				unAnswered++;
-			} else if (quest[i] === "Owl") {
+			} else if (quest[i] === ans[i]) {
 				correctAnswers++;
 			} else {
 				wrongAnswers++;
