@@ -16,7 +16,7 @@ $(document).ready(function() {
 	//create the timer variables and function
 	//adjust startCount to change length of time for quiz
 
-	var startCount = 8;
+	var startCount = 60;
 	var myTimer;
 	var correctAnswers = 0;
 	var wrongAnswers = 0;
@@ -26,11 +26,11 @@ $(document).ready(function() {
 	var quest = [];
 
 	//real answers: owl, Dentist, Grandmother, Snake, Motorcycle, Lumos, Accio, Buckbeak
-	var ans = ["Owl", "Dentist", "Grandmother", "Snake", "Motorcycle", "Lumos", "Accio", "Buckbeak"]
+	var ans = ["Owl", "Dentist", "Grandmother", "Snake", "Motorcycle", "Lumos", "Accio", "Buckbeak"];
 
 
 
-	for (var i = 0; i < 8; i++) {
+	for (var i = 0; i < ans.length; i++) {
 
 		quest[i] = "";
 		console.log(quest[i]);
@@ -92,13 +92,10 @@ $(document).ready(function() {
 	});
 
 
-		// user starts picking answers
-		// get value from radio buttons and store correct answers
+				// user starts picking answers
+				// get value from radio buttons and store correct answers
 
-				// I've tried tons of sites and I can't find a way to translate
-				// to what I actually need.
-				// But I know it's the value of the radio button.
-				// So, will somehow get values for each question
+				
 
 				// I need a function that executes when the timer counts down...
 				// ...and if the user hits the "Done" button. Both of these places
@@ -107,22 +104,26 @@ $(document).ready(function() {
 
 		function choicesMade() {
 
-		//	quest[0] = $(#qOneAnswers.qOne.value);
-		//	quest[1] = $(#qTwoAnswers.qTwo.value);
-		//	quest[2] = $(#qThreeAnswers.qThree.value);
-		//	quest[3] = $(#qFourAnswers.qFour.value);
-		//	quest[4] = $(#qFiveAnswers.qFive.value);
-		//	quest[5] = $(#qSixAnswers.qSix.value);
-		//	quest[6] = $(#qSevenAnswers.qSeven.value);
-		//	quest[7] = $(#qEightAnswers.qEight.value);
+			quest[0] = $("input[name=qOne]:checked").val();
+			quest[1] = $("input[name=qTwo]:checked").val();
+			quest[2] = $("input[name=qThree]:checked").val();
+			quest[3] = $("input[name=qFour]:checked").val();
+			quest[4] = $("input[name=qFive]:checked").val();
+			quest[5] = $("input[name=qSix]:checked").val();
+			quest[6] = $("input[name=qSeven]:checked").val();
+			quest[7] = $("input[name=qEight]:checked").val();
+
+
 
 
 
 			// then check to see if the choices that were made are correct
 
-			for (var i = 0; i < 8; i++) {
+			for (var i = 0; i < quest.length; i++) {
 
-				if (quest[i] === "") {
+				console.log(quest[i]);
+
+				if (quest[i] === undefined) {
 				unAnswered++;
 			} else if (quest[i] === ans[i]) {
 				correctAnswers++;
