@@ -56,7 +56,7 @@ $(document).ready(function() {
 			$("#doneButton").hide();
 			$(".allDone").show();
 
-		}
+	}
 
 		// create function to run the count down timer
 
@@ -113,10 +113,6 @@ $(document).ready(function() {
 			quest[6] = $("input[name=qSeven]:checked").val();
 			quest[7] = $("input[name=qEight]:checked").val();
 
-
-
-
-
 			// then check to see if the choices that were made are correct
 
 			for (var i = 0; i < quest.length; i++) {
@@ -125,11 +121,11 @@ $(document).ready(function() {
 
 				if (quest[i] === undefined) {
 				unAnswered++;
-			} else if (quest[i] === ans[i]) {
+				} else if (quest[i] === ans[i]) {
 				correctAnswers++;
-			} else {
+				} else {
 				wrongAnswers++;
-			}
+				}
 			}
 
 			//Then, write the new variable to DOM
@@ -147,7 +143,7 @@ $(document).ready(function() {
 	//make the questions div disappear
 	//make the allDone div appear
 
-	$("#doneButton").click(function(){
+	$("#doneButton").click(function() {
 
 		$("#doneButton").hide();
 		$(".timeRemaining").hide();
