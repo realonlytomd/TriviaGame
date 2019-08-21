@@ -115,7 +115,7 @@ $(document).ready(function() {
 
 			for (var i = 0; i < quest.length; i++) {
 
-				console.log(quest[i]);
+				console.log("quest[" + i + "]: " + quest[i]);
 
 				if (quest[i] === undefined) {
 				unAnswered++;
