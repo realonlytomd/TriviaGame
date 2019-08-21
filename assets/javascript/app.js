@@ -46,16 +46,15 @@ $(document).ready(function() {
 
 	function stopTimer() {
 		console.log("we are in stopTimer " + startCount);
-			clearTimeout(myTimer);
-			choicesMade();
+		clearTimeout(myTimer);
+		choicesMade();
 
-			//also need to re-hide the divs and ids not pertinent
+		//also need to re-hide the divs and ids not pertinent
 
-			$(".timeRemaining").hide();
-			$(".questions").hide();
-			$("#doneButton").hide();
-			$(".allDone").show();
-
+		$(".timeRemaining").hide();
+		$(".questions").hide();
+		$("#doneButton").hide();
+		$(".allDone").show();
 	}
 
 		// create function to run the count down timer
@@ -69,7 +68,6 @@ $(document).ready(function() {
 			console.log("we have reached " + startCount);
 			stopTimer();
 		}
-		
 	}
 
 	//at the click of the start button,
