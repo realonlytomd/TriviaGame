@@ -17,6 +17,16 @@ h1 {
 	font-size: 56px;
 }
 
+h2 {
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 48px;
+}
+
+h4 {
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 32px;
+}
+
 #startButton {
 	font-family: 'Sedgwick Ave Display', cursive;
 	font-size: 50px;
@@ -30,6 +40,13 @@ h1 {
 
 h3 {
 	margin-top: 40px;
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 32px;
+}
+
+.radio-inline {
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 14px;
 }
 
 #doneButton {
