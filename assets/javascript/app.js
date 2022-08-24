@@ -40,6 +40,26 @@ $(document).ready(function() {
 	// initialize the variable for getting values from radio buttons
 	var radioValue = "";
 
+	// create function to change the color of the start button
+	// to cycle through all the colors
+
+	var btcolor = "rgb(162,70,128)";
+		for (red=0; red <= 255; red++) {
+			for (green=0; green <= 255; green++) {
+				for (blue=0; blue <= 255; blue++) {
+					var redstring = red.toString();
+					var greenstring = green.toString();
+					var bluestring = blue.toString();
+					btcolor = "rgb(" + redstring + greenstring + bluestring + ");";
+					console.log("btcolor = ", btcolor);
+					break;
+				}
+			}
+		}
+
+	$("#startButton").css("background-color", btcolor);
+
+	//
 	//creating the function to stop the timer if it counts down to zero
 	//or if the Done button is clicked
 	
