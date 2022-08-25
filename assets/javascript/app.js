@@ -39,16 +39,6 @@ $(document).ready(function() {
 	// create function to change the color of the start button
 	// to cycle through all the colors
 
-	function timer() {
-		$("#countDown").html(startCount);
-		startCount = startCount - 1;
-		console.log(startCount);
-		myTimer = setTimeout(function(){ timer() }, 1000);
-		if (startCount === -1) {
-			console.log("we have reached " + startCount);
-			stopTimer();
-		}
-	}
 	function colorTimer() {
 		loopRed:
 		for (red; red <= 255; red++) {
@@ -56,20 +46,30 @@ $(document).ready(function() {
 			for (green; green <= 255; green++) {
 				loopBlue:
 				for (blue; blue <= 255; blue++) {
+					console.log("beginning of loopBlue: red, green, blue: " + red + ", " + green + ", " + blue);
 					var redstring = red.toString();
 					var greenstring = green.toString();
 					var bluestring = blue.toString();
 					btcolor = "rgb(" + redstring + "," + greenstring + "," + bluestring + ");";
 					console.log("btcolor = ", btcolor);
 					$("#startButton").css("background-color", btcolor);
-					break loopGreen;
-					break loopRed;
-					myColorTimer = setTimeout(function(){ colorTimer() }, 100);
+					//break loopGreen;
+					//break loopRed;
+					console.log("after breaks: red, green, blue: " + red + ", " + green + ", " + blue);
+					if (red === 255) {
+						console.log("red is 255");
+						red = 0;
+						green = 0;
+						blue = 0;
+					}
+					myColorTimer = setTimeout(function(){ colorTimer() }, 1000);
+					
 				}
 			}
 		}
 	}
-
+	
+	colorTimer();
 
 	//
 	//creating the function to stop the timer if it counts down to zero
