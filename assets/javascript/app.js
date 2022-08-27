@@ -1,11 +1,9 @@
 $(document).ready(function() {
 	console.log("hello");
 	// initialize color of start button and that timer
-	var btcolor = "";
+	var btcolor = [];
 	var myColorTimer;
-	var red=0;
-	var green=0;
-	var blue=0;
+	var j = 0; // the counter for cycling through the color array for the html element
 
 
 	// hide divs that are not shown at the beginning of game
@@ -36,61 +34,64 @@ $(document).ready(function() {
 		console.log(quest[i]);
 	}
 
-	// create function to change the color of the start button
-	// to cycle through all the colors
-
-	function colorTimer() {
-		loopRed:
-		for (red; red <= 255; red++) {
-			loopGreen:
-			for (green; green <= 255; green++) {
-				loopBlue:
-				for (blue; blue <= 255; blue++) {
-					console.log("beginning of loopBlue: red, green, blue: " + red + ", " + green + ", " + blue);
-					var redstring = red.toString();
-					var greenstring = green.toString();
-					var bluestring = blue.toString();
-					btcolor = "rgb(" + redstring + "," + greenstring + "," + bluestring + ");";
-					console.log("btcolor = ", btcolor);
-					$("#startButton").css("background-color", btcolor);
-					//break loopGreen;
-					//break loopRed;
-					console.log("after breaks: red, green, blue: " + red + ", " + green + ", " + blue);
-					if (red === 255) {
-						console.log("red is 255");
-						red = 0;
-						green = 0;
-						blue = 0;
-					}
-					myColorTimer = setTimeout(function(){ colorTimer() }, 1000);
-					
+	// create function, buildRBG, to build an array of all 16 million colors
+	function buildRGB() {
+		LoopRed:
+		for (var red = 0; red <= 100; red++) {
+			LoopGreen:
+			for (var green = 0; green <= 100; green++) {
+				LoopBlue:
+				for (var blue = 0; blue <= 100; blue++) {
+					// console.log("beginning of loopBlue: red, green, blue: " + red + ", " + green + ", " + blue);
+					var redString = red.toString();
+					var greenString = green.toString();
+					var blueString = blue.toString();
+					btcolor.push("rgb(" + redString + "," + greenString + "," + blueString + ")");
+					// break LoopBlue;
+					// break LoopGreen;
+					// break LoopRed;
 				}
 			}
 		}
+		console.log("btcolor = ", btcolor);
+		// call the timer function to start cycling through the array on the HTML element
+		colorTimer();
 	}
 	
-	colorTimer();
+	// call the function that builds the colors for the element (button)
+	buildRGB();
+
+	// make a timer function that will loop through the colors in a timed fashion
+	function colorTimer() {
+		//console.log("j: ", j);
+		$("#startButton").css("background-color", btcolor[j]);
+		j = j + 1;
+		myColorTimer = setTimeout(function(){ colorTimer() }, 10);
+		if (j === 1030302) {
+		stopColorTimer();
+		}
+	}
+	// make stop timer for the color cycling that then calls the color timer over again
+	function stopColorTimer() {
+		clearTimeout(myColorTimer);
+		j = 0;
+		colorTimer();
+	}
 
 	//
 	//creating the function to stop the timer if it counts down to zero
 	//or if the Done button is clicked
-	
-
 	function stopTimer() {
 		console.log("we are in stopTimer " + startCount);
 		clearTimeout(myTimer);
 		choicesMade();
-
 		//also need to re-hide the divs and ids not pertinent
-
 		$(".timeRemaining").hide();
 		$(".questions").hide();
 		$("#doneButton").hide();
 		$(".allDone").show();
 	}
-
 		// create function to run the count down timer
-
 	function timer() {
 		$("#countDown").html(startCount);
 		startCount = startCount - 1;
