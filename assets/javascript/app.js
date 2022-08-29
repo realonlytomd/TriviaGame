@@ -37,11 +37,11 @@ $(document).ready(function() {
 	// create function, buildRBG, to build an array of all 16 million colors
 	function buildRGB() {
 		LoopRed:
-		for (var red = 0; red <= 100; red++) {
+		for (var red = 0; red <= 255; red = red + 5) {
 			LoopGreen:
-			for (var green = 0; green <= 100; green++) {
+			for (var green = 0; green <= 255; green = green + 5) {
 				LoopBlue:
-				for (var blue = 0; blue <= 100; blue++) {
+				for (var blue = 0; blue <= 255; blue = blue + 5) {
 					// console.log("beginning of loopBlue: red, green, blue: " + red + ", " + green + ", " + blue);
 					var redString = red.toString();
 					var greenString = green.toString();
@@ -67,8 +67,8 @@ $(document).ready(function() {
 		$("#startButton").css("background-color", btcolor[j]);
 		j = j + 1;
 		myColorTimer = setTimeout(function(){ colorTimer() }, 10);
-		if (j === 1030302) {
-		stopColorTimer();
+		if (j === 140609) {
+			stopColorTimer();
 		}
 	}
 	// make stop timer for the color cycling that then calls the color timer over again
