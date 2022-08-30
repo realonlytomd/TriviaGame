@@ -47,9 +47,6 @@ $(document).ready(function() {
 					var greenString = green.toString();
 					var blueString = blue.toString();
 					btcolor.push("rgb(" + redString + "," + greenString + "," + blueString + ")");
-					// break LoopBlue;
-					// break LoopGreen;
-					// break LoopRed;
 				}
 			}
 		}
@@ -57,17 +54,28 @@ $(document).ready(function() {
 		// call the timer function to start cycling through the array on the HTML element
 		colorTimer();
 	}
+
+	// create new function, buildRBGsimple, to build an array of all 16 million colors
+	// but just counting up each R, G, and B by 1 (or 5, or 10, whatever)
+	function buildRGBsimple() {
+		for (var allColor = 0; allColor <= 255; allColor = allColor + 1) {
+					var colorString = allColor.toString();
+					btcolor.push("rgb(" + colorString + "," + colorString + "," + colorString + ")");
+		}
+		console.log("btcolor = ", btcolor);
+		// call the timer function to start cycling through the array on the HTML element
+		colorTimer();
+	}
 	
 	// call the function that builds the colors for the element (button)
-	buildRGB();
+	buildRGBsimple();
 
 	// make a timer function that will loop through the colors in a timed fashion
 	function colorTimer() {
-		//console.log("j: ", j);
 		$("#startButton").css("background-color", btcolor[j]);
 		j = j + 1;
-		myColorTimer = setTimeout(function(){ colorTimer() }, 10);
-		if (j === 140609) {
+		myColorTimer = setTimeout(function(){ colorTimer() }, 100);
+		if (j === 257) {
 			stopColorTimer();
 		}
 	}
