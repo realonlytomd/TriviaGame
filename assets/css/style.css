@@ -33,7 +33,38 @@ h4 {
 	padding: 20px 40px 20px 40px;
 	margin-bottom: 40px;
     border: 2px solid black;
+	/*animation-name: MyAnimation;
+	animation-duration: 40s;
+	animation-iteration-count: infinite;*/
 }
+
+/* testing key frames and animations */
+/*@keyframes MyAnimation {
+	0% {
+		background-color: black;
+	}
+
+	20% {
+		background-color: red;
+	}
+
+	40% {
+		background-color: green;
+	}
+
+	60% {
+		background-color: blue;
+	}
+
+	80% {
+		background-color: white;
+	}
+
+	100% {
+		background-color: black;
+	}
+}*/
+
 
 h3 {
 	margin-top: 40px;
