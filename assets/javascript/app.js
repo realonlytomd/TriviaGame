@@ -60,10 +60,10 @@ $(document).ready(function() {
 	function buildHSLsimple() {
 		for (var hue = 0; hue <= 360; hue = hue + 1) {
 					var hueString = hue.toString();
-					var sat = hue / 3.6; // saturation goes from 0 to 100% over the same time as hue
-					// goes 0 to 360
-					var satString = sat.toString();
-					btcolor.push("hsl(" + hueString + ", 100%, " + satString + "%)");
+					var light = hue / 3.6; // lightness goes from 0 to 100% over the same time as hue
+					// goes 0 to 360, so the button (or any div) starts at black, and is white by the end
+					var lightString = light.toString();
+					btcolor.push("hsl(" + hueString + ", 100%, " + lightString + "%)");
 		}
 		console.log("btcolor = ", btcolor);
 		// call the timer function to start cycling through the array on the HTML element
