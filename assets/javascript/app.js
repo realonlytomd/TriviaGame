@@ -56,8 +56,8 @@ $(document).ready(function() {
 		colorTimer();
 	}
 
-	// create new function, buildRBGsimple, to build an array of all 16 million colors
-	// but just counting up each R, G, and B by 1 (or 5, or 10, whatever)
+	// create new function, buildHSLsimple, to build an array of 360 colors using HSL
+	
 	function buildHSLsimple() {
 		for (var hue = 0; hue <= 360; hue++) {
 					var hueString = hue.toString();
