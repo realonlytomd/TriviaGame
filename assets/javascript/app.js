@@ -4,7 +4,8 @@ $(document).ready(function() {
 	var btcolor = [];
 	var myColorTimer;
 	var j = 0; // the counter for cycling through the color array for the html element
-
+	var light = 0;
+	var hueDown = 181; // to get the light number to go down, hue needs to move down from 180 to 0
 
 	// hide divs that are not shown at the beginning of game
 
@@ -58,10 +59,16 @@ $(document).ready(function() {
 	// create new function, buildRBGsimple, to build an array of all 16 million colors
 	// but just counting up each R, G, and B by 1 (or 5, or 10, whatever)
 	function buildHSLsimple() {
-		for (var hue = 0; hue <= 360; hue = hue + 1) {
+		for (var hue = 0; hue <= 360; hue++) {
 					var hueString = hue.toString();
-					var light = hue / 3.6; // lightness goes from 0 to 100% over the same time as hue
-					// goes 0 to 360, so the button (or any div) starts at black, and is white by the end
+					if (hue <= 180) {
+						light = (hue / 3) + 20;
+						console.log("light inside if under 180: ", light);
+					} else {
+						hueDown = hueDown - 1; // first time, hueDown would be 180
+						light = (hueDown / 3) + 20;
+						console.log("light inside if over 180: ", light);
+					}
 					var lightString = light.toString();
 					btcolor.push("hsl(" + hueString + ", 100%, " + lightString + "%)");
 		}
