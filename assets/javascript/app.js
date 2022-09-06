@@ -65,7 +65,7 @@ $(document).ready(function() {
 						light = (hue / 3) + 20;
 						console.log("light inside if under 180: ", light);
 					} else {
-						hueDown = hueDown - 1; // first time, hueDown would be 180
+						hueDown = hueDown - 1; // first time, hueDown would be 181
 						light = (hueDown / 3) + 20;
 						console.log("light inside if over 180: ", light);
 					}
