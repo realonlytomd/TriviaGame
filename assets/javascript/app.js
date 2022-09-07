@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var myColorTimer;
 	var j = 0; // the counter for cycling through the color array for the html element
 	var light = 0;
-	var hueDown = 181; // to get the light number to go down, hue needs to move down from 180 to 0
+	var hueDown = 180; // to get the light number to go down, hue needs to move down from 180 to 0
 
 	// hide divs that are not shown at the beginning of game
 
@@ -83,9 +83,10 @@ $(document).ready(function() {
 	// make a timer function that will loop through the colors in a timed fashion
 	function colorTimer() {
 		$("#startButton").css("background-color", btcolor[j]);
+		$("#startButton").html("Start" + "<br>" + "<background-color>");
 		j = j + 1;
 		myColorTimer = setTimeout(function(){ colorTimer() }, 100);
-		if (j === 361) {
+		if (j === 121) {
 			stopColorTimer();
 		}
 	}
