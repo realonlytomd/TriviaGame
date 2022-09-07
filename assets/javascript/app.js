@@ -59,7 +59,7 @@ $(document).ready(function() {
 	// create new function, buildHSLsimple, to build an array of 360 colors using HSL
 	
 	function buildHSLsimple() {
-		for (var hue = 0; hue <= 360; hue++) {
+		for (var hue = 0; hue <= 360; hue=hue+3) {
 					var hueString = hue.toString();
 					if (hue <= 180) {
 						light = (hue / 3) + 20;
