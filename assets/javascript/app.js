@@ -83,7 +83,8 @@ $(document).ready(function() {
 	// make a timer function that will loop through the colors in a timed fashion
 	function colorTimer() {
 		$("#startButton").css("background-color", btcolor[j]);
-		$("#startButton").html("Start" + "<br>" + "<background-color>");
+		var styleBackground = $("#startButton").css("background-color");
+		$("#startButton").html("Start" + "<br>" + styleBackground);
 		j = j + 1;
 		myColorTimer = setTimeout(function(){ colorTimer() }, 100);
 		if (j === 121) {
