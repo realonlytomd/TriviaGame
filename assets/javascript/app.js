@@ -59,13 +59,13 @@ $(document).ready(function() {
 	// create new function, buildHSLsimple, to build an array of 360 colors using HSL
 	
 	function buildHSLsimple() {
-		for (var hue = 0; hue <= 360; hue=hue+3) {
+		for (var hue = 0; hue <= 360; hue = hue + 3) {
 					var hueString = hue.toString();
 					if (hue <= 180) {
 						light = (hue / 3) + 20;
 						console.log("light inside if under 180: ", light);
 					} else {
-						hueDown = hueDown - 1; // first time, hueDown would be 181
+						hueDown = hueDown - 3; // first time, hueDown would be 181
 						light = (hueDown / 3) + 20;
 						console.log("light inside if over 180: ", light);
 					}
